@@ -7,14 +7,16 @@ import Account from "./Pages/Account.tsx";
 import Navbar from "./compunents/layout/Navbar.tsx";
 import { NeonAuthUIProvider } from "@neondatabase/neon-js/auth/react";
 import { authClient } from "./lib/auth.ts";
+import AuthProvider from "./context/AuthContext.tsx";
 
 
 function App() {
 
 
   return (
-      <NeonAuthUIProvider authClient={authClient}>
-       <BrowserRouter>
+      <NeonAuthUIProvider authClient={authClient} defaultTheme="dark">
+         <AuthProvider>
+          <BrowserRouter>
            <div className="min-h-screen flex flex-col">
                <Navbar/>
                    <main className="flex-1">
@@ -27,7 +29,8 @@ function App() {
                      </Routes>
                    </main>
                </div>
-       </BrowserRouter>
+          </BrowserRouter>
+         </AuthProvider>
       </NeonAuthUIProvider>
   )
 }
