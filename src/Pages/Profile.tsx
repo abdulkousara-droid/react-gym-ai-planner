@@ -9,7 +9,7 @@ export default function  Profile (){
     }
 
     if(!plan){
-        return <Navigate to="/oboarding" replace/>
+        return <Navigate to="/onboarding" replace/>
     }
     return<div>Profile Page</div>
 }
