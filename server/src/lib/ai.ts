@@ -27,6 +27,7 @@ export async function generateTrainingPlan(
     const openai = new OpenAI({
         apiKey,
         baseURL: "https://openrouter.ai/api/v1",
+        timeout: 180000,
         defaultHeaders: {
             "HTTP-Referer": process.env.BASE_URL || "http://localhost:3001",
             "X-Title": "GymAI Plan Generator",
@@ -38,7 +39,7 @@ export async function generateTrainingPlan(
 
     try {
         const completion = await openai.chat.completions.create({
-            model: "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+            model: "nvidia/nemotron-3-super-120b-a12b:free",
             messages: [
                 {
                     role: "system",
