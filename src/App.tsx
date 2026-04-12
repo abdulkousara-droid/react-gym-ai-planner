@@ -4,7 +4,7 @@ import Profile from "./Pages/Profile.tsx";
 import Onboarding from "./Pages/Onboarding.tsx";
 import Auth from "./Pages/Auth.tsx";
 import Account from "./Pages/Account.tsx";
-import Navbar from "./compunents/layout/Navbar.tsx";
+import Navbar from "./components/layout/Navbar.tsx";
 import { NeonAuthUIProvider } from "@neondatabase/neon-js/auth/react";
 import { authClient } from "./lib/auth.ts";
 import AuthProvider from "./context/AuthContext.tsx";
