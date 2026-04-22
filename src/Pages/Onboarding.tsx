@@ -173,7 +173,7 @@ export default function Onboarding() {
 
                                 <div className="flex gap-3 pt-2">
                                     <Button type="submit" className="flex-1 gap-2">
-                                        Generate My Plan <ArrowRight className="w-4 h-4" />
+                                        {error ? error : "Generate My Plan"} <ArrowRight className="w-4 h-4" />
                                     </Button>
                                 </div>
                             </form>
